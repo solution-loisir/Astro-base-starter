@@ -1,0 +1,64 @@
+---
+interface Props {
+	title: string,
+	description: string
+}
+
+const { title, description } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content={description}>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="sitemap" href="/sitemap-index.xml">
+		<link rel="canonical" href={canonicalURL}>
+		<link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon-180x180.png">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content={title}>
+    <meta property="og:url" content={canonicalURL}>
+		<meta property="og:description" content={description}>
+		<meta property="og:site_name" content={title}>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
