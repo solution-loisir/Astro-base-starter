@@ -19,3 +19,4 @@ npm run generate-favicons path/to/source.png
 5. Replace the url with your production domain:
     * On the `site` property inside of `astro.config.mjs`.
     * In `public/robots.txt`.
+6. Tweek `src/data/manifest.json` according to your configuration.
