@@ -17,5 +17,5 @@ npm run generate-favicons path/to/source.png
 3. Navigate to the directory.
 4. Install dependencies.
 5. Replace the url with your production domain:
-    * On the `site` property inside of astro.config.mjs.
-    * In public/robots.txt.
+    * On the `site` property inside of `astro.config.mjs`.
+    * In `public/robots.txt`.

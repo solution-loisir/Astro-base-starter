@@ -1,4 +1,6 @@
 ---
+import { manifest } from "@data/manifest";
+
 interface Props {
 	title: string,
 	description: string
@@ -20,6 +22,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon-180x180.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="anonymous">
+		<meta name="theme-color" content={manifest.theme}>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="twitter:card" content="summary_large_image">

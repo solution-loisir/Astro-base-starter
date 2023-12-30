@@ -6,7 +6,7 @@ import { browserslistToTargets } from "lightningcss";
 
 
 export default defineConfig({
-  site: "http://localhost:4321/",
+  site: "https://yourdomain.com",
   integrations: [
     sitemap(), 
     mdx()
