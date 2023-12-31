@@ -5,6 +5,7 @@ A slightly opiniated starter theme for general purpose content websites.
 * Sitemap through [@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/). The sitemap is linked inside of BaseLayout head as well as in the robots.txt.
 * MDX through [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/)
 * Lightning CSS as a Vite transformer using Browserslist's `defaults`
+* Web manifest. Needs to be configure at `src/data/manifest.json`. Also provides default page title and description.
 * Generate favicons with a one time script `generate-favicons`. The generated favicons are already linked in the BaseLayout head. Usage:
 
 ```sh
@@ -19,4 +20,4 @@ npm run generate-favicons path/to/source.png
 5. Replace the url with your production domain:
     * On the `site` property inside of `astro.config.mjs`.
     * In `public/robots.txt`.
-6. Tweek `src/data/manifest.json` according to your configuration.
+6. Tweek `src/data/manifest.json` according to your configuration. Will provide default page title and description.

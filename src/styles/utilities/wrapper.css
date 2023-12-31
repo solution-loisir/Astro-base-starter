@@ -1,0 +1,9 @@
+.wrapper {
+  margin-inline: auto;
+  width: min(60ch, 94vw);
+}
+
+.wrapper-lg {
+  margin-inline: auto;
+  width: 94vw;
+}
