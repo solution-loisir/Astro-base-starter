@@ -1,12 +1,15 @@
 ---
+import "@styles/index.css";
 import { manifest } from "@data/manifest";
 
 interface Props {
-	title: string,
-	description: string
+	title?: string,
+	description?: string
 }
 
 const { title, description } = Astro.props;
+const pageTitle = title ? `${manifest.title} | ${title}` : manifest.title;
+const pageDescription = description || manifest.description;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -14,7 +17,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content={description}>
+		<meta name="description" content={pageDescription}>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="sitemap" href="/sitemap-index.xml">
 		<link rel="canonical" href={canonicalURL}>
@@ -25,13 +28,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<link rel="manifest" href="/manifest.json" crossorigin="anonymous">
 		<meta name="theme-color" content={manifest.theme}>
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{pageTitle}</title>
 		<meta name="twitter:card" content="summary_large_image">
 		<meta property="og:type" content="website">
-		<meta property="og:title" content={title}>
+		<meta property="og:title" content={pageTitle}>
     <meta property="og:url" content={canonicalURL}>
-		<meta property="og:description" content={description}>
-		<meta property="og:site_name" content={title}>
+		<meta property="og:description" content={pageDescription}>
+		<meta property="og:site_name" content={pageTitle}>
 	</head>
 	<body>
 		<slot />
