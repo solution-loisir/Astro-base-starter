@@ -1,4 +1,4 @@
-import { manifest } from "@data/manifest";
+import { manifest } from "@config/manifest";
 
 export function GET() {
 
