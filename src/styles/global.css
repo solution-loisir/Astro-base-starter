@@ -129,3 +129,7 @@ main {
 big {
   font-size: var(--size-1200);
 }
+
+small {
+  font-size: var(--size-300); 
+}

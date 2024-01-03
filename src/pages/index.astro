@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import Card from "@components/Card.astro";
+import { Prism } from "@astrojs/prism";
+import InlinePrism from "@components/InlinePrism.astro";
 ---
 
 <BaseLayout 
@@ -37,32 +38,19 @@ import Card from "@components/Card.astro";
 			</defs>
 		</svg>
 		<h1><big>Welcome to <span class="text-gradient">Astro</span></big></h1>
-		<p class="instructions wrapper-lg">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<section class="wrapper-lg">
+			<p class="instructions">
+				To get started, open the directory <InlinePrism lang="js" code={`src/pages`} /> in your project.<br>
+				<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			</p>
+			<Prism 
+				lang="js" 
+				code={`const test = "test";
+function read(text) {
+	return text.toString();
+}`
+			} />
+		</section>
 	</main>
 </BaseLayout>
 
@@ -84,17 +72,6 @@ import Card from "@components/Card.astro";
 		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
 		padding: 1.5rem;
 		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
 	}
 	.link-card-grid {
 		display: grid;

@@ -1,0 +1,6 @@
+---
+import { runHighlighterWithAstro } from "@astrojs/prism/dist/highlighter";
+const { lang, code } = Astro.props;
+const { classLanguage, html} = runHighlighterWithAstro(lang, code);
+---
+<code class={classLanguage} set:html={html} />

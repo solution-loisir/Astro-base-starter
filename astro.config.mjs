@@ -11,6 +11,9 @@ export default defineConfig({
     sitemap(), 
     mdx()
   ],
+  markdown: {
+    syntaxHighlight: "prism",
+  },
   vite: {
     css: {
       transformer: "lightningcss",
