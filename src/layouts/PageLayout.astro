@@ -3,7 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 import { getCollection } from 'astro:content';
 
 const { title, description} = Astro.props;
-const pages = await getCollection("pages");
+const pages = await getCollection("pages", ({data}) => data.order);
 const _pages = pages.sort((a, b) => a.data.order - b.data.order);
 ---
 

@@ -4,11 +4,14 @@ import mdx from "@astrojs/mdx";
 import browserslist from "browserslist";
 import { browserslistToTargets } from "lightningcss";
 
+const site = "https://yourdomain.com";
 
 export default defineConfig({
-  site: "https://yourdomain.com",
+  site,
   integrations: [
-    sitemap(), 
+    sitemap({
+      filter: (page) => page !== `${site}/policy/`,
+    }), 
     mdx()
   ],
   markdown: {
