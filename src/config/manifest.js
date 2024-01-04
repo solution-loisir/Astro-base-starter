@@ -4,5 +4,7 @@ export const manifest = {
   description: "A slightly opiniated starter theme for general purpose content websites.",
   display: "fullscreen",
   background: "#ffffff",
-  theme: "#000000"
+  theme: "#000000",
+  startURL: "/",
+  scope: "/"
 }

@@ -19,10 +19,10 @@ export function GET() {
           sizes: "512x512"
         }
       ],
-      start_url: "/",
+      start_url: manifest.startURL,
       background_color: manifest.background,
       display: manifest.display,
-      scope: "/",
+      scope: manifest.scope,
       theme_color: manifest.theme
     })
   )
