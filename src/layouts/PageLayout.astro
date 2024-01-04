@@ -1,13 +1,23 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { getCollection } from 'astro:content';
+
 const { title, description} = Astro.props;
+const pages = await getCollection("pages");
+const _pages = pages.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <BaseLayout 
   title = {title} 
   description = {description} 
 >
-  <header></header>
+  <header>
+    <nav>
+      <ol role="list">
+        {_pages.map((entry) => <li><a href={`/${entry.slug}/`}>{entry.data.title}</a></li>)}
+      </ol>
+    </nav>
+  </header>
   <main>
     <slot />
   </main>
