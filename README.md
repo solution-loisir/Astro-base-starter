@@ -1,5 +1,5 @@
 # Astro Starter Kit
-A slightly opiniated starter theme for general purpose content websites.
+An opiniated starter theme for general purpose content websites. It provides a base structure to build on. This is not a fully styled theme.
 
 ## Features
 * Sitemap through [@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/). The sitemap is linked inside of `BaseLayout` head as well as in the `robots.txt`.
