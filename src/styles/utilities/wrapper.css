@@ -1,9 +1,9 @@
 .wrapper {
   margin-inline: auto;
-  width: min(60ch, 94vw);
+  width: var(--width);
 }
 
 .wrapper-lg {
   margin-inline: auto;
-  width: 94vw;
+  width: var(--width-lg);
 }

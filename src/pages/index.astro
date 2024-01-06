@@ -8,7 +8,7 @@ import InlinePrism from "@components/InlinePrism.astro";
 	title="Welcome to Astro." 
 	description="Astro base starter home page."
 >
-	<main>
+	<header>
 		<svg
 			class="astro-a"
 			width="495"
@@ -37,9 +37,11 @@ import InlinePrism from "@components/InlinePrism.astro";
 				</linearGradient>
 			</defs>
 		</svg>
-		<section class="wrapper-lg">
-			<h1><big><span class="gradient">Astro</span> Base <span class="gradient">Starter</span></big></h1>
-			<p class="instructions">
+	</header>
+	<main class="wrapper-lg">
+		<h1><big><span class="gradient">Astro</span> Base <span class="gradient">Starter</span></big></h1>
+		<section class="wrapper">
+			<p>
 				To get started, open the directory <InlinePrism lang="js" code={`src/pages`} /> in your project.<br>
 				<strong>Code Challenge:</strong> Tweak the "Astro Base Starter" message above.
 			</p>
@@ -65,5 +67,10 @@ function read(text) {
   	background-clip: text;
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
+	}
+
+	h1 {
+		width: fit-content;
+		margin-inline: auto;
 	}
 </style>
