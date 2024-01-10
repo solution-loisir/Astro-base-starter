@@ -135,18 +135,6 @@ main {
   padding-block-end: var(--size-900);
 }
 
-header:not([class]) {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  row-gap: var(--size-300);
-  column-gap: var(--size-900);
-  padding-block: var(--padding-sm);
-  padding-inline: var(--padding-md);
-  box-shadow: 3px 3px 10px -3px hwb(216 83% 13%);
-}
-
 a[aria-current="page"] {
   text-decoration: underline;
 }
