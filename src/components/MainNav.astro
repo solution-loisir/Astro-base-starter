@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+
+const pages = await getCollection("pages", ({data}) => data.order !== false);
+const sotredPages = pages.sort((a, b) => a.data.order - b.data.order);
+const currentPath = Astro.url.pathname;
+---
+
+<nav>
+  <ol role="list">
+    <li><a href="/" aria-current={currentPath === "/" ? "page" : null} class="reset">Home</a></li>
+    {sotredPages.map((entry) => 
+      <li>
+        <a 
+          href={`/${entry.slug}/`} 
+          aria-current={currentPath === `/${entry.slug}/` ? "page" : null}
+          class="reset"
+        >
+          {entry.data.title}
+        </a>
+      </li>
+    )}
+  </ol>
+</nav>
+
+<style>
+  a[aria-current="page"] {
+    text-decoration: underline;
+  }
+
+  ol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--size-400);
+  }
+</style>

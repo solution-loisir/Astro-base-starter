@@ -135,10 +135,6 @@ main {
   padding-block-end: var(--size-900);
 }
 
-a[aria-current="page"] {
-  text-decoration: underline;
-}
-
 big {
   font-size: var(--size-1200);
 }
