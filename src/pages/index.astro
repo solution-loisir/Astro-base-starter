@@ -19,10 +19,12 @@ import PageHeader from "@components/PageHeader.astro";
 			</p>
 			<Prism 
 				lang="js" 
-				code={`const test = "test";
-function read(text) {
-	return text.toString();
-}`
+				code={`const num = 123;
+function read(input) {
+	return input.toString();
+}
+
+const text = read(num);`
 			} />
 		</section>
 	</main>
