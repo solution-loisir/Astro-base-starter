@@ -15,7 +15,9 @@ const _pages = pages.sort((a, b) => a.data.order - b.data.order);
 >
   <PageHeader />
   <main>
-    <slot />
+    <section class="wrapper">
+      <slot />
+    </section>
   </main>
   <footer></footer>
 </BaseLayout>
