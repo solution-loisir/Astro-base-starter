@@ -3,6 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 import { getCollection } from 'astro:content';
 import type { Props } from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import PageFooter from "@components/PageFooter.astro";
 
 const { title, description} = Astro.props;
 const pages = await getCollection("pages", ({data}) => data.order !== false);
@@ -19,5 +20,5 @@ const _pages = pages.sort((a, b) => a.data.order - b.data.order);
       <slot />
     </section>
   </main>
-  <footer></footer>
+  <PageFooter />
 </BaseLayout>
