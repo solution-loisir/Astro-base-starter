@@ -26,7 +26,6 @@ xl: 80rem -> ~1280px
   --color-light-blue: hwb(216 90% 0%);
   --color-gray: hwb(216 90% 5%);
   --color-gray-transparent: hwb(216 90% 5% / 0.8);
-  --color-white: #fff;
   --gradient-primary: linear-gradient(55deg, hwb(216 0% 20%) 0%, hwb(216 0% 25%) 12.5%, hwb(216 0% 29%) 25%, hwb(216 35% 35%) 37.5%, hwb(216 0% 39%) 50%, hwb(216 35% 44%) 62.5%, hwb(216 0% 44%) 75%, hwb(216 0% 39%) 87.5%, hwb(216 0% 35%) 100%);
   --webkit-gradient-primary: -webkit-linear-gradient(55deg, hwb(216 0% 20%) 0%, hwb(216 0% 25%) 12.5%, hwb(216 0% 29%) 25%, hwb(216 35% 35%) 37.5%, hwb(216 0% 39%) 50%, hwb(216 35% 44%) 62.5%, hwb(216 0% 44%) 75%, hwb(216 0% 39%) 87.5%, hwb(216 0% 35%) 100%);
   /* Sizes */
