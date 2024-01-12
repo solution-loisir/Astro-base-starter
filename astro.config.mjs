@@ -26,6 +26,9 @@ export default defineConfig({
           nesting: true
         }
       }
+    },
+    build: {
+      cssMinify: "lightningcss"
     }
   },
 });
