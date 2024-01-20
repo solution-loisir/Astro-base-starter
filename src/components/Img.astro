@@ -1,0 +1,21 @@
+---
+// @ts-nocheck
+import { Picture } from "astro:assets";
+
+const {src, ...attrs} = Astro.props;
+---
+
+<Picture 
+  src={src} 
+  {...attrs} 
+  widths={[600, 450, 30]}
+  formats={["avif", "webp", "jpeg"]}
+  sizes={`(max-width: 48rem) 300px, (max-width: 62rem) 450px, 600px`}
+/>
+
+<style>
+  img {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-image);
+  }
+</style>

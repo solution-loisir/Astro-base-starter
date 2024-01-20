@@ -3,5 +3,10 @@ title: About
 description: A brief history of our company and services.
 order: 2
 ---
+import friendsPlaying from "@images/friends-playing.jpg";
+import Img from "@components/Img.astro";
+
 # {frontmatter.title}
 {frontmatter.description}
+
+<Img src={friendsPlaying} alt="friends playing in the parc." loading="eager" />
