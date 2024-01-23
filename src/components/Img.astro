@@ -6,7 +6,7 @@ import type { HTMLAttributes } from "astro/types";
 interface Props {
   src: ImageMetadata,
   alt?: string,
-  additionnalAttributes?: HTMLAttributes<'picture'>
+  additionnalAttributes?: HTMLAttributes<'picture'> | Props
 }
 
 const {
