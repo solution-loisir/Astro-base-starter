@@ -1,0 +1,29 @@
+.flow.flow-xs > * + *,
+.flow > .flow-xs > * + * {
+  margin-block-start: var(--size-100);
+}
+
+.flow.flow-sm > * + *,
+.flow > .flow-sm > * + * {
+  margin-block-start: var(--size-200);
+}
+
+.flow > * + *,
+.flow > .flow > * + * {
+  margin-block-start: var(--size-400);
+}
+
+.flow.flow-md > * + *,
+.flow > .flow-md > * + * {
+  margin-block-start: var(--size-900);
+}
+
+.flow.flow-lg > * + *,
+.flow > .flow-lg > * + * {
+  margin-block-start: var(--size-600);
+}
+
+.flow.flow-xl > * + *,
+.flow > .flow-xl > * + * {
+  margin-block-start: var(--size-900);
+}

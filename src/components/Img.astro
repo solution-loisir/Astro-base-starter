@@ -1,13 +1,24 @@
 ---
-// @ts-nocheck
 import { Picture } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
-const {src, ...attrs} = Astro.props;
+interface Props {
+  src: ImageMetadata,
+  alt?: string,
+  loading?: "lazy" | "eager" | null | undefined
+}
+
+const {
+  src,
+  alt = "",
+  loading = "lazy"
+} = Astro.props;
 ---
 
-<Picture 
-  src={src} 
-  {...attrs} 
+<Picture  
+  src={src}
+  alt={alt}
+  loading={loading} 
   widths={[600, 450, 30]}
   formats={["avif", "webp", "jpeg"]}
   sizes={`(max-width: 48rem) 300px, (max-width: 62rem) 450px, 600px`}
