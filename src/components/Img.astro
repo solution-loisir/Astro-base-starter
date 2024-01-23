@@ -1,27 +1,28 @@
 ---
 import { Picture } from "astro:assets";
 import type { ImageMetadata } from "astro";
+import type { HTMLAttributes } from "astro/types";
 
 interface Props {
   src: ImageMetadata,
   alt?: string,
-  loading?: "lazy" | "eager" | null | undefined
+  additionnalAttributes?: HTMLAttributes<'picture'>
 }
 
 const {
   src,
   alt = "",
-  loading = "lazy"
+  ...additionnalAttributes
 } = Astro.props;
 ---
 
-<Picture  
+<Picture
   src={src}
-  alt={alt}
-  loading={loading} 
+  alt={alt} 
   widths={[600, 450, 30]}
   formats={["avif", "webp", "jpeg"]}
   sizes={`(max-width: 48rem) 300px, (max-width: 62rem) 450px, 600px`}
+  {...additionnalAttributes}
 />
 
 <style>
