@@ -53,4 +53,5 @@ xl: 80rem -> ~1280px
   --radius-round: 50%;
   /* Shadows */
   --shadow-image: 2px 2px 6px -2px hwb(216 5% 85%);
+  --shadow-header: 3px 3px 10px -3px hwb(216 83% 13%);
 }
