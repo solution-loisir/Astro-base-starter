@@ -24,7 +24,7 @@ export default defineConfig({
     css: {
       transformer: "lightningcss",
       lightningcss: {
-        targets: browserslistToTargets(browserslist("defaults")),
+        targets: browserslistToTargets(browserslist(">= 2%")),
         drafts: {
           nesting: true
         }
