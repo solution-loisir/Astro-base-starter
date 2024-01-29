@@ -13,19 +13,10 @@ xl: 80rem -> ~1280px
   --font-headings: Verdana, Geneva, Tahoma, sans-serif;
   /* Colors */
   --color-primary: hwb(216 0% 20%);
-  --color-primary-darker: hwb(216 0% 30%);
-  --color-primary-transparent: hwb(216 0% 20% / 0.8);
   --color-accent: hwb(357 35% 1%);
-  --color-accent-darker: hwb(357 35% 31%);
-  --color-accent-transparent: hwb(357 35% 1% / 0.8);
-  --color-light-accent: hwb(357 90% 0%);
   --color-dark: hwb(216 0% 98%);
-  --color-dark-transparent: hwb(216 0% 98% / 0.8);
   --color-light: hwb(216 98% 0%);
-  --colot-light-transparent: hwb(216 98% 0% / 0.8);
-  --color-light-blue: hwb(216 90% 0%);
   --color-gray: hwb(216 90% 5%);
-  --color-gray-transparent: hwb(216 90% 5% / 0.8);
   --gradient-primary: -webkit-linear-gradient(55deg, hwb(216 0% 20%) 0%, hwb(216 0% 25%) 12.5%, hwb(216 0% 29%) 25%, hwb(216 35% 35%) 37.5%, hwb(216 0% 39%) 50%, hwb(216 35% 44%) 62.5%, hwb(216 0% 44%) 75%, hwb(216 0% 39%) 87.5%, hwb(216 0% 35%) 100%);
   /* Sizes */
   --size-100: 0.2rem;
