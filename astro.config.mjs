@@ -3,7 +3,6 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import browserslist from "browserslist";
 import { browserslistToTargets } from "lightningcss";
-import purgecss from "astro-purgecss";
 
 const site = "https://yourdomain.com";
 
@@ -14,8 +13,7 @@ export default defineConfig({
     sitemap({
       filter: page => page !== `${site}/policy/`
     }), 
-    mdx(), 
-    purgecss()
+    mdx()
   ],
   markdown: {
     syntaxHighlight: "prism"
