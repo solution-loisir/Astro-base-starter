@@ -16,9 +16,11 @@
     "@astrojs/prism": "^3.0.0",
     "@astrojs/sitemap": "^3.0.3",
     "astro": "^4.0.7",
+    "astro-purgecss": "^4.1.0",
     "browserslist": "^4.22.2",
     "favicons": "^7.1.5",
     "lightningcss": "^1.22.1",
+    "purgecss": "^5.0.0",
     "sharp": "^0.33.1",
     "typescript": "^5.3.3"
   }

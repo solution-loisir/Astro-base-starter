@@ -3,19 +3,22 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import browserslist from "browserslist";
 import { browserslistToTargets } from "lightningcss";
+import purgecss from "astro-purgecss";
 
 const site = "https://yourdomain.com";
 
+// https://astro.build/config
 export default defineConfig({
   site,
   integrations: [
     sitemap({
-      filter: (page) => page !== `${site}/policy/`,
+      filter: page => page !== `${site}/policy/`
     }), 
-    mdx()
+    mdx(), 
+    purgecss()
   ],
   markdown: {
-    syntaxHighlight: "prism",
+    syntaxHighlight: "prism"
   },
   vite: {
     css: {
@@ -30,5 +33,5 @@ export default defineConfig({
     build: {
       cssMinify: "lightningcss"
     }
-  },
+  }
 });
