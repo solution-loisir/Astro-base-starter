@@ -11,7 +11,7 @@ export default defineConfig({
   site,
   integrations: [
     sitemap({
-      filter: page => page !== `${site}/policy/`
+      filter: page => !page.includes(`${site}/secret/`)
     }), 
     mdx()
   ],
