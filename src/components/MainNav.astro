@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 
-const pages = await getCollection("pages", ({data}) => data.order >= 0);
+const pages = await getCollection("pages", ({data}) => data.build && data.order >= 0);
 const sotredPages = pages.sort((a, b) => a.data.order - b.data.order);
 const currentPath = Astro.url.pathname;
 ---

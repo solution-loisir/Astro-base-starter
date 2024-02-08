@@ -5,7 +5,14 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    order: z.number()
+    /**
+     * @description Determines the order inside of `MainNav` component. Set to a negative number to prevent entry in `MainNav`.
+     */
+    order: z.number(),
+    /**
+     * @description Set to false to prevent the page to build.
+     */
+    build: z.boolean()
   })
 });
 
