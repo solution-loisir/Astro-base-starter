@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
+    "postbuild": "purgecss --css dist/_astro/**/*.css --content dist/*.html dist/**/*.html --output dist/_astro/",
     "preview": "astro preview",
     "astro": "astro",
     "generate-favicons": "node generate-favicons.js"
