@@ -14,8 +14,8 @@ xl: 80rem -> ~1280px
   /* Colors */
   --color-primary: hwb(216 0% 20%);
   --color-accent: hwb(357 35% 1%);
-  --color-dark: hwb(216 0% 98%);
-  --color-light: hwb(216 98% 0%);
+  --color-canvas-text: hwb(216 0% 98%);
+  --color-canvas: hwb(216 98% 0%);
   --color-gray: hwb(216 90% 5%);
   --gradient-primary: -webkit-linear-gradient(55deg, hwb(216 0% 20%) 0%, hwb(216 0% 25%) 12.5%, hwb(216 0% 29%) 25%, hwb(216 35% 35%) 37.5%, hwb(216 0% 39%) 50%, hwb(216 35% 44%) 62.5%, hwb(216 0% 44%) 75%, hwb(216 19% 32%) 87.5%, hwb(216 0% 35%) 100%);
   /* Sizes */

@@ -11,8 +11,8 @@ html:focus-within {
 body {
   font-family: var(--font-main);
   font-size: var(--size-500);
-  color: var(--color-dark);
-  background-color: var(--color-light);
+  color: var(--color-canvas-text);
+  background-color: var(--color-canvas);
   overflow-x: hidden;
   line-height: 1.5;
 }
