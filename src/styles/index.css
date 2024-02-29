@@ -2,6 +2,6 @@
 @import "reset.css";
 @import "global.css";
 @import "prism.css";
+@import "composition/flow.css";
 @import "utilities/wrapper.css";
 @import "utilities/hidding.css";
-@import "utilities/flow.css";
