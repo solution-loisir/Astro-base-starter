@@ -11,7 +11,7 @@ An opiniated starter theme for general purpose content websites. It provides a b
 ```sh
 npm run generate-favicons path/to/source.png
 ```
-* Removing unused global style with Purgecss
+* Removing unused global style with Purgecss in production
 * Prism for code highlighting
 * Generate pages from `content/pages` through `pages/[...path].astro` using `layouts/PageLayout.astro`. For pages frontmatter definition see `content/config.ts`
 
