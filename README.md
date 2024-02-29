@@ -6,7 +6,7 @@ An opiniated starter theme for general purpose content websites. It provides a b
 * MDX through [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/)
 * Lightning CSS as a Vite transformer using Browserslist's `defaults`
 * Web manifest. Needs to be configure at `src/config/manifest.json`. Also provides default page title and description.
-* Generate favicons in `public/images/favicons/` with a one time script `generate-favicons`. See `generate-favicons.js` for script details. The generated favicons are already linked in the BaseLayout head. Usage:
+* Generate favicons in `public/images/favicons` with a one time script `generate-favicons`. See `generate-favicons.js` for script details. The generated favicons are already linked in the BaseLayout head. Usage:
 
 ```sh
 npm run generate-favicons path/to/source.png
@@ -26,4 +26,4 @@ npm run generate-favicons path/to/source.png
 6. Tweek `src/config/manifest.json` according to your configuration. Will provide default page title and description.
 
 ## Style
-This theme is adopting an approach to css inspired by [CUBE CSS](https://cube.fyi/) and [Every Layout](https://every-layout.dev/). The main variation here is that [blocks](https://cube.fyi/block.html) and [exceptions](https://cube.fyi/exception.html) usully lives in the `Astro` components.
+This theme is adopting an approach to css inspired by [CUBE CSS](https://cube.fyi/) and [Every Layout](https://every-layout.dev/). The main variation here is that [blocks](https://cube.fyi/block.html) and [exceptions](https://cube.fyi/exception.html) usully lives in the `.astro` components.
