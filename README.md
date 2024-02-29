@@ -11,6 +11,8 @@ An opiniated starter theme for general purpose content websites. It provides a b
 ```sh
 npm run generate-favicons path/to/source.png
 ```
+* Removing unused global style with Purgecss
+* Prism for code highlighting
 
 ## How to use
 1. Click the "Use this template" button.
@@ -21,3 +23,6 @@ npm run generate-favicons path/to/source.png
     * On the `site` property inside of `astro.config.mjs`.
     * In `public/robots.txt`.
 6. Tweek `src/config/manifest.json` according to your configuration. Will provide default page title and description.
+
+## Style
+This theme is adopting an approach to css inspired by [CUBE CSS](https://cube.fyi/) and [Every Layout](https://every-layout.dev/). The main variation here is that [blocks](https://cube.fyi/block.html) and [exceptions](https://cube.fyi/exception.html) usully lives in the `Astro` components.
