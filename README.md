@@ -6,13 +6,14 @@ An opiniated starter theme for general purpose content websites. It provides a b
 * MDX through [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/)
 * Lightning CSS as a Vite transformer using Browserslist's `defaults`
 * Web manifest. Needs to be configure at `src/config/manifest.json`. Also provides default page title and description.
-* Generate favicons with a one time script `generate-favicons`. The generated favicons are already linked in the BaseLayout head. Usage:
+* Generate favicons in `public/images/favicons/` with a one time script `generate-favicons`. See `generate-favicons.js` for script details. The generated favicons are already linked in the BaseLayout head. Usage:
 
 ```sh
 npm run generate-favicons path/to/source.png
 ```
 * Removing unused global style with Purgecss
 * Prism for code highlighting
+* Generate pages from `content/pages` through `pages/[...path].astro` using `layouts/PageLayout.astro`. For pages frontmatter definition see `content/config.ts`
 
 ## How to use
 1. Click the "Use this template" button.
