@@ -9,6 +9,7 @@ const site = "https://yourdomain.com";
 // https://astro.build/config
 export default defineConfig({
   site,
+  prefetch: false,
   integrations: [
     sitemap({
       filter: page => !page.includes(`${site}/secret/`)

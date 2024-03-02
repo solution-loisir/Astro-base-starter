@@ -13,8 +13,9 @@ npm run generate-favicons path/to/source.png
 ```
 * Removing unused global style with Purgecss in production
 * Prism for code highlighting
-* Generate pages from `content/pages` through `pages/[...path].astro` using `layouts/PageLayout.astro`. For pages frontmatter definition see `content/config.ts`
+* Generate pages from `src/content/pages` through `src/pages/[...path].astro` using `src/layouts/PageLayout.astro`. For pages frontmatter definition see `src/content/config.ts`
 * Aliasing relevant directories in `src`. For details see `tsconfig.json`
+* Set `prefetch` to `true` or assign a config object to use a prefetch strategy. See https://docs.astro.build/en/guides/prefetch/ 
 
 ## How to use
 1. Click the "Use this template" button.
