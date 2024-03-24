@@ -8,7 +8,7 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
-const pageTitle = title ? `${manifest.title} | ${title}` : manifest.title;
+const pageTitle = title ? `${title} | ${manifest.title}` : manifest.title;
 const pageDescription = description || manifest.description;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
