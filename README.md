@@ -4,7 +4,7 @@ An opiniated starter theme for general purpose content websites. It provides a b
 ## Features
 * Sitemap through [@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/). The sitemap is linked inside of `BaseLayout` head as well as in the `robots.txt`.
 * MDX through [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/)
-* Lightning CSS as a Vite transformer using Browserslist's `defaults`
+* Lightning CSS as a Vite transformer
 * Web manifest. Needs to be configure at `src/config/manifest.json`. Also provides default page title and description.
 * Generate favicons in `public/images/favicons` with a one time script `generate-favicons`. See `generate-favicons.js` for script details. The generated favicons are already linked in the BaseLayout head. Usage:
 
