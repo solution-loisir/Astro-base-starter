@@ -25,7 +25,7 @@ npm run generate-favicons path/to/source.png
 5. Replace the url with your production domain:
     * On the `site` property inside of `astro.config.mjs`.
     * In `public/robots.txt`.
-6. Tweek `src/config/manifest.json` according to your configuration. Will provide default page title and description.
+6. Tweek `src/config/manifest.json` according to your configuration. Will provide default page `title` and `description`.
 
 ## Style
 This theme is adopting an approach to css inspired by [CUBE CSS](https://cube.fyi/) and [Every Layout](https://every-layout.dev/). The main variation here is that [blocks](https://cube.fyi/block.html) and [exceptions](https://cube.fyi/exception.html) usully lives in the `.astro` components.
