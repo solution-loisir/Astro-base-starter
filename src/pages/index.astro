@@ -11,7 +11,7 @@ import PageHeader from "@components/PageHeader.astro";
 >
 	<PageHeader />
 	<main class="wrapper-lg">
-		<h1><big><span class="gradient">Astro</span> Base <span class="gradient">Starter</span></big></h1>
+		<h1><span class="gradient">Astro</span> Base <span class="gradient">Starter</span></h1>
 		<section class="wrapper">
 			<p>
 				To get started, open the directory <InlinePrism lang="js" code={`src/pages`} /> in your project.<br>
@@ -32,7 +32,7 @@ const text = read(num);`
 
 <style>
 	.gradient {
-		background: var(--gradient-primary);
+		background: linear-gradient(45deg, hwb(216 0% 20%), hwb(357 35% 1%));
   	background-clip: text;
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
@@ -41,5 +41,6 @@ const text = read(num);`
 	h1 {
 		width: fit-content;
 		margin-inline: auto;
+		font-size: var(--size-1200);
 	}
 </style>
