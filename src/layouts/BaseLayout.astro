@@ -26,6 +26,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon-180x180.png">
 		<link rel="manifest" href="/manifest.json" crossorigin="anonymous">
+		<meta name="msapplication-config" content="/browserconfig.xml">
+		<meta name="msapplication-TileColor" content={manifest.theme}>
+		<meta name="supported-color-schemes" content={manifest.colorShemes}>
 		<meta name="theme-color" content={manifest.theme}>
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
