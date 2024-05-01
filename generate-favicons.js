@@ -20,6 +20,7 @@ const destination = {
         case "android-chrome-192x192.png":
         case "android-chrome-512x512.png":
         case "apple-touch-icon-180x180.png":
+        case "mstile-150x150.png":
           await fs.writeFile(path.join(destination.path, image.name), image.contents);
       }
     })
