@@ -6,5 +6,6 @@ export const manifest = {
   background: "#ffffff",
   theme: "#000000",
   startURL: "/",
-  scope: "/"
+  scope: "/",
+  colorShemes: "light"
 }
