@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
-    "@astrojs/mdx": "^2.0.2",
+    "@astrojs/mdx": "^2.3.1",
     "@astrojs/prism": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.3",
-    "astro": "^4.0.7",
-    "browserslist": "^4.22.2",
-    "favicons": "^7.1.5",
-    "lightningcss": "^1.22.1",
+    "@astrojs/sitemap": "^3.1.6",
+    "astro": "^4.11.1",
+    "browserslist": "^4.23.1",
+    "favicons": "^7.2.0",
+    "lightningcss": "^1.25.1",
     "purgecss": "^5.0.0"
   }
 }
