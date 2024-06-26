@@ -1,10 +1,15 @@
 ---
 import { Picture } from "astro:assets";
 import type { ImageMetadata } from "astro";
+import type { ComponentProps } from "astro/types";
+
+type PictureProps = ComponentProps<typeof Picture>;
 
 interface Props {
-  src: ImageMetadata,
-  alt?: string
+  /** Won't work with images stored in the /public directory. */
+  src: ImageMetadata | Promise<{default: ImageMetadata;}>,
+  alt?: string,
+  additionnalAttributes: PictureProps
 }
 
 const {
