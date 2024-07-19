@@ -4,12 +4,32 @@ import { manifest } from "@config/manifest";
 
 export interface Props {
 	title?: string,
-	description?: string
+	description?: string,
+	og?: {
+		type?: string,
+		image?: {
+			src?: string,
+			alt?: string,
+			width?: string,
+			height?: string
+		}
+	}
 }
 
-const { title, description } = Astro.props;
+const { 
+	title, 
+	description = manifest.description,
+	og = {
+		type: "website",
+		image: {
+			src: "",
+			alt: "",
+			width: "1200",
+			height: "600"
+		}
+	}
+} = Astro.props;
 const pageTitle = title ? `${title} | ${manifest.title}` : manifest.title;
-const pageDescription = description || manifest.description;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -17,7 +37,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content={pageDescription}>
+		<meta name="description" content={description}>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="sitemap" href="/sitemap-index.xml">
 		<link rel="canonical" href={canonicalURL}>
@@ -33,11 +53,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 		<meta name="twitter:card" content="summary_large_image">
-		<meta property="og:type" content="website">
+		<meta property="og:type" content={og.type}>
 		<meta property="og:title" content={pageTitle}>
     <meta property="og:url" content={canonicalURL}>
-		<meta property="og:description" content={pageDescription}>
+		<meta property="og:description" content={description}>
 		<meta property="og:site_name" content={pageTitle}>
+		<meta property="og:image" content={og.image?.src}>
+    <meta property="og:image:secure_url" content={og.image?.src}>
+    <meta property="og:image:alt" content={og.image?.alt}>
+    <meta property="og:image:width" content={og.image?.width}>
+    <meta property="og:image:height" content={og.image?.height}>
 	</head>
 	<body>
 		<slot />
