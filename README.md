@@ -16,6 +16,7 @@ npm run generate-favicons path/to/source.png
 * Generate pages from `src/content/pages` through `src/pages/[...path].astro` using `src/layouts/PageLayout.astro`. For pages frontmatter definition see `src/content/config.ts`
 * Aliasing relevant directories in `src`. For details see `tsconfig.json`
 * Set `prefetch` to `true` or assign a config object to use a prefetch strategy. See https://docs.astro.build/en/guides/prefetch/ 
+* Default Open Graph image located in `public/images/`
 
 ## How to use
 1. Click the "Use this template" button.
@@ -26,6 +27,7 @@ npm run generate-favicons path/to/source.png
     * On the `site` property inside of `astro.config.mjs`.
     * In `public/robots.txt`.
 6. Tweek `src/config/manifest.json` according to your configuration. Will provide default page `title` and `description`.
+7. Replace default Open Graph image in `public/images/` with your site specific OG image. You may have to modify OG image width and height. Optimal OG image dimesion is 1200 x 630.
 
 ## Style
 This theme is adopting an approach to css inspired by [CUBE CSS](https://cube.fyi/) and [Every Layout](https://every-layout.dev/). The main variation here is that [blocks](https://cube.fyi/block.html) and [exceptions](https://cube.fyi/exception.html) usully lives in the `.astro` components.
