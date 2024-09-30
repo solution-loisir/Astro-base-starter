@@ -17,6 +17,21 @@ npm run generate-favicons path/to/source.png
 * Aliasing relevant directories in `src`. For details see `tsconfig.json`
 * Set `prefetch` to `true` or assign a config object to use a prefetch strategy. See https://docs.astro.build/en/guides/prefetch/ 
 * Default Open Graph image located in `public/images/`
+* Custom DOM library for light scripting. Check it out in `src/lib/dom.ts`. May be used in `Astro` components as so:
+```html
+<ol data-ref="my-list"></ol>
+
+<script>
+    import { ref, insertHTML } from "@dom";
+
+    let markup = `
+        <li>Item one</li>
+        <li>Item two</li>
+    `;
+
+    insertHTML(markup, ref("my-list"));
+</script>
+```
 
 ## How to use
 1. Click the "Use this template" button.
