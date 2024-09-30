@@ -5,7 +5,7 @@ export function GET() {
   return new Response(
     JSON.stringify({
       short_name: manifest.title,
-      name: manifest.title + ". " + manifest.subtitle,
+      name: manifest.longTitle,
       description: manifest.description,
       icons: [
         {

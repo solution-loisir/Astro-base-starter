@@ -1,6 +1,6 @@
 interface Manifest {
   title: string,
-  subtitle: string,
+  longTitle: string,
   description: string,
   display: "fullscreen" | "standalone" | "minimal-ui" | "browser",
   background: `#${string}`,
@@ -12,7 +12,7 @@ interface Manifest {
 
 export const manifest: Manifest = {
   title: "Astro base starter",
-  subtitle: "An Astro framework starter theme.",
+  longTitle: "Astro base starter, an Astro framework starter theme.",
   description: "A slightly opiniated starter theme for general purpose content websites.",
   display: "standalone",
   background: "#ffffff",
