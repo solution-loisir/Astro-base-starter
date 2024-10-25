@@ -17,6 +17,7 @@ npm run generate-favicons path/to/source.png
 * Aliasing relevant directories in `src`. For details see `tsconfig.json`
 * Set `prefetch` to `true` or assign a config object to use a prefetch strategy. See https://docs.astro.build/en/guides/prefetch/ 
 * Default Open Graph image located in `public/images/`
+* A `404` page located at `src/pages/404.astro`. Produces a custom `404` page when supported by your hosting provider.
 * Custom DOM library for light scripting. Check it out in `src/lib/dom.ts`. May be used in `Astro` components as so:
 ```html
 <ol data-ref="my-list"></ol>
