@@ -12,11 +12,11 @@
     "generate-favicons": "node generate-favicons.js"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/mdx": "^3.1.7",
-    "@astrojs/prism": "^3.1.0",
-    "@astrojs/sitemap": "^3.1.6",
-    "astro": "^4.15.9",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.2",
+    "@astrojs/prism": "^3.2.0",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.0.5",
     "browserslist": "^4.24.0",
     "favicons": "^7.2.0",
     "lightningcss": "^1.27.0",
