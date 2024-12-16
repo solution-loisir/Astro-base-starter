@@ -12,8 +12,8 @@ const currentPath = Astro.url.pathname;
     {sotredPages.map((entry) => 
       <li>
         <a 
-          href={`/${entry.slug}/`} 
-          aria-current={currentPath === `/${entry.slug}/` ? "page" : null}
+          href={`/${entry.id}/`} 
+          aria-current={currentPath === `/${entry.id}/` ? "page" : null}
           class="reset"
         >
           {entry.data.title}
